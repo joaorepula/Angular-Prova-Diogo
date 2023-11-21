@@ -1,0 +1,19 @@
+<h1>Listagem de produtos</h1>
+
+<table id="table">
+  <tr>
+    <th>Título</th>
+    <th>Descrição</th>
+    <th>Categoria</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let p of tarefas">
+    <td>{{ p.titulo }}</td>
+    <td>{{ p.descricao }}</td>
+    <td>{{ p.categoriaId }}</td>
+    <td>{{ p.statusId }}</td>
+    <td><button (click)="redirecionar()">Cadastrar Tarefa</button></td>
+  </tr>
+  <button (click)="redirecionarSemFim()">Listagem terminadas</button>
+  <button (click)="redirecionarComFim()">Listagem sem terminar</button>
+</table>
